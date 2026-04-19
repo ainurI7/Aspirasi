@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Aspirasi Siswa</title>
+<link rel="stylesheet" href="aspicss.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="container">
+  <div class="card">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Masuk</button>
+    <p>Belum punya akun? <span class="link" onclick="showRegister()">Daftar</span></p>
+  </div>
+</div>
+
+<!-- REGISTER -->
+<div id="registerPage" class="container hidden">
+  <div class="card">
+    <h2>Daftar</h2>
+    <input type="text" id="regUser" placeholder="Username">
+    <input type="password" id="regPass" placeholder="Password">
+    <button onclick="register()">Daftar</button>
+    <p>Sudah punya akun? <span class="link" onclick="showLogin()">Login</span></p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="mainPage" class="hidden">
+
+<header>
+  <h1>Aspirasi Siswa</h1>
+  <p id="welcome"></p>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Kirim Aspirasi</h3>
+    <textarea id="aspirasi" placeholder="Tulis aspirasi..."></textarea>
+    <button onclick="tambahAspirasi()">Kirim</button>
+  </div>
+
+  <div id="listAspirasi"></div>
+
+</div>
+</div>
+
+<script src="aspijs.js"></script>
+</body>
+</html>
